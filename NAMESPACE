@@ -1,0 +1,14 @@
+useDynLib(rGADEM)
+
+import(IRanges)
+import(Biostrings)
+import(BSgenome)
+importClassesFrom(Biostrings)
+
+import(methods)
+importFrom(graphics, plot)
+importFrom(seqLogo, plot)
+
+export(GADEM, readPWMfile)
+exportClasses(parameters, align, gadem, motif)
+exportMethods(dim, names, consensus, parameters,startPos,endPos,nOccurrences,nMotifs,plot,getPWM)
