@@ -226,7 +226,7 @@ int cn[4];//maxHeaderLen;
 		
       if (site[i].rev=='0') {
          if (site[i].pos<0) {
-				char sequence_conca[100]="";
+				char sequence_conca[256]="";
             for (j=0; j<pwmLen+site[i].pos; j++) {
                switch(seq[site[i].seq][j]) {
                  case 'a': strcat(sequence_conca,"A");break;
@@ -239,7 +239,7 @@ int cn[4];//maxHeaderLen;
             }
          }
          else {
-		char sequence_conca[100]="";
+		char sequence_conca[256]="";
             for (j=site[i].pos; j<min(seqLen[site[i].seq],site[i].pos+pwmLen); j++) {
                switch(seq[site[i].seq][j]) {
                  case 'a': strcat(sequence_conca,"A");break;
@@ -265,7 +265,7 @@ int cn[4];//maxHeaderLen;
       else {
   
        if (site[i].pos<0) {
-			char sequence_conca[50]="";
+			char sequence_conca[256]="";
             //for (j=site[i].pos; j<0; j++) Rprintf("X"); 
             for (j=0; j<pwmLen+site[i].pos; j++) {
                switch(rseq[site[i].seq][j]) {
@@ -279,7 +279,7 @@ int cn[4];//maxHeaderLen;
             }
          }
          else {
-			char sequence_conca[50]="";
+			char sequence_conca[256]="";
             for (j=site[i].pos; j<min(seqLen[site[i].seq],site[i].pos+pwmLen); j++) {
                switch(rseq[site[i].seq][j]) {
                   case 'a': strcat(sequence_conca,"A");break;
